@@ -9,6 +9,10 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
+  "engines":{
+    "node": "14.x",
+    "npm": "8.5.5"
+  },
   "author": "Noah Seitz",
   "license": "MIT",
   "dependencies": {
