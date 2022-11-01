@@ -1,0 +1,47 @@
+
+
+.main {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+h1 {
+    margin: 10px;
+    align-items: center;
+    font-size: 40px;
+    color: rgb(1, 1, 59);
+}
+
+.search {
+    width: 30%;
+}
+
+.parent{
+    -moz-column-count: 2;
+    -moz-column-gap: 0%;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0%;
+    column-count: 2;
+    column-gap: 0%;
+}
+
+.left {
+    float: left;
+    width: 90%;
+    height: auto;
+}
+
+.right{
+    float: right;
+    width: 100%;
+    height: auto;
+
+} 
+
+
+ul li {
+    font-size: 20px;
+} 
