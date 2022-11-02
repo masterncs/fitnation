@@ -1,0 +1,5 @@
+# web: npm run dev
+# web: npm run server && npm run client
+
+api: node backend/server.js 
+#web: npm start --prefix frontend

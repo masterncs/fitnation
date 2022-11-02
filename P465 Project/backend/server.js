@@ -14,6 +14,13 @@ app.use(express.static('public'));
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
+const path = require('path')
+app.use(express.static(path.join(__dirname, '../frontend/public/')))
+
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname + '/../frontend/public/index.html'))
+})
+
 //upload endpoint
 app.post('/upload', (req,res) =>{
     if (req.files == null) {
@@ -34,6 +41,10 @@ app.post('/upload', (req,res) =>{
 app.use('/api/users', require('./routes/userRoutes'))
 
 app.use(errorHandler)
+
+app.get("/:universalURL", (req,res) => {
+    res.send("404 URL NOT FOUND");
+});
 
 app.listen(port, () => console.log(`Server started on port ${port}`))
 
